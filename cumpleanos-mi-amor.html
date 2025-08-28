@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¡Feliz Aniversario, Mi Niña Bonita! 💕</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: 
+        radial-gradient(circle at 20% 30%, rgba(75, 0, 130, 0.4) 0%, transparent 60%),
+        radial-gradient(circle at 80% 20%, rgba(139, 69, 19, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 70%, rgba(72, 61, 139, 0.3) 0%, transparent 55%),
+        radial-gradient(circle at 90% 80%, rgba(148, 0, 211, 0.2) 0%, transparent 45%),
+        radial-gradient(circle at 60% 40%, rgba(25, 25, 112, 0.3) 0%, transparent 50%),
+        linear-gradient(135deg, 
+          #0f0f23 0%, 
+          #1a1a2e 15%, 
+          #16213e 30%, 
+          #0f3460 45%, 
+          #533483 60%, 
+          #7209b7 75%, 
+          #2d1b69 90%, 
+          #0f0f23 100%
+        );
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 100px;
+      animation: nightShimmer 10s ease-in-out infinite;
+    }
+
+    @keyframes nightShimmer {
+      0%, 100% {
+        filter: brightness(0.9) saturate(1.1) hue-rotate(0deg);
+      }
+      33% {
+        filter: brightness(1.1) saturate(1.3) hue-rotate(10deg);
+      }
+      66% {
+        filter: brightness(0.95) saturate(1.2) hue-rotate(-5deg);
+      }
+    }
+
+    /* Estrellas de fondo románticas */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(1px 1px at 25px 35px, #daa520, transparent),
+        radial-gradient(2px 2px at 65px 75px, #e6e6fa, transparent),
+        radial-gradient(1px 1px at 105px 45px, #9370db, transparent),
+        radial-gradient(1px 1px at 145px 85px, #ffd700, transparent),
+        radial-gradient(2px 2px at 185px 25px, #da70d6, transparent),
+        radial-gradient(1px 1px at 215px 65px, #f0e68c, transparent);
+      background-repeat: repeat;
+      background-size: 250px 120px;
+      animation: nightStars 20s linear infinite;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.7;
+    }
+
+    @keyframes nightStars {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.7;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-120px) rotate(360deg);
+        opacity: 0.7;
+      }
+    }
+
+    /* Corazones flotantes de fondo */
+    body::after {
+      content: '� 🌙 � ⭐ � � � 🌙 � ⭐ � � � 🌙 � ⭐ � �';
+      position: fixed;
+      top: -50px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      font-size: 28px;
+      color: rgba(186, 85, 211, 0.4);
+      animation: nightFloating 25s linear infinite;
+      pointer-events: none;
+      z-index: 1;
+      line-height: 90px;
+      letter-spacing: 45px;
+      text-align: center;
+      overflow: hidden;
+      text-shadow: 0 0 10px rgba(186, 85, 211, 0.6);
+    }
+
+    @keyframes nightFloating {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      15% {
+        opacity: 1;
+      }
+      85% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-250px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Partículas de fondo */
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .particle {
+      position: absolute;
+      font-size: 20px;
+      animation: float 8s infinite linear;
+      opacity: 0.7;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Título principal */
+    .main-title {
+      position: fixed;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2.2em;
+      font-weight: bold;
+      color: #da70d6;
+      text-align: center;
+      text-shadow: 
+        4px 4px 20px rgba(0, 0, 0, 0.8),
+        0 0 30px rgba(218, 112, 214, 0.9),
+        0 0 60px rgba(138, 43, 226, 0.6),
+        0 0 100px rgba(75, 0, 130, 0.4);
+      animation: nightTitleGlow 4s ease-in-out infinite;
+      z-index: 15;
+      line-height: 1.1;
+      max-width: 85%;
+      word-wrap: break-word;
+      background: 
+        linear-gradient(135deg, rgba(75, 0, 130, 0.3) 0%, rgba(138, 43, 226, 0.2) 100%),
+        rgba(0, 0, 0, 0.4);
+      padding: 8px 20px;
+      border-radius: 12px;
+      backdrop-filter: blur(20px);
+      white-space: normal;
+      border: 2px solid rgba(186, 85, 211, 0.4);
+      box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.5),
+        inset 0 1px 20px rgba(218, 112, 214, 0.2);
+    }
+
+    @keyframes nightTitleGlow {
+      0%, 100% {
+        color: #da70d6;
+        text-shadow: 
+          4px 4px 20px rgba(0, 0, 0, 0.8),
+          0 0 30px rgba(218, 112, 214, 0.9),
+          0 0 60px rgba(138, 43, 226, 0.6),
+          0 0 100px rgba(75, 0, 130, 0.4);
+        transform: translateX(-50%) scale(1);
+      }
+      50% {
+        color: #9370db;
+        text-shadow: 
+          4px 4px 30px rgba(0, 0, 0, 0.9),
+          0 0 40px rgba(147, 112, 219, 1),
+          0 0 80px rgba(138, 43, 226, 0.8),
+          0 0 120px rgba(75, 0, 130, 0.6);
+        transform: translateX(-50%) scale(1.05);
+      }
+    }
+
+    /* Container principal */
+    .password-container {
+      background: 
+        linear-gradient(135deg, rgba(75, 0, 130, 0.2) 0%, rgba(138, 43, 226, 0.15) 100%),
+        rgba(25, 25, 112, 0.1);
+      backdrop-filter: blur(30px);
+      border: 3px solid rgba(186, 85, 211, 0.5);
+      border-radius: 30px;
+      padding: 25px 35px;
+      text-align: center;
+      box-shadow: 
+        0 30px 60px rgba(0, 0, 0, 0.6),
+        inset 0 1px 20px rgba(218, 112, 214, 0.2),
+        0 0 40px rgba(138, 43, 226, 0.2);
+      animation: nightContainerFloat 5s ease-in-out infinite;
+      position: relative;
+      z-index: 5;
+      max-width: 380px;
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    @keyframes nightContainerFloat {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+        box-shadow: 
+          0 30px 60px rgba(0, 0, 0, 0.6),
+          inset 0 1px 20px rgba(218, 112, 214, 0.2),
+          0 0 40px rgba(138, 43, 226, 0.2);
+      }
+      50% {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 
+          0 40px 80px rgba(0, 0, 0, 0.7),
+          inset 0 1px 30px rgba(218, 112, 214, 0.3),
+          0 0 60px rgba(138, 43, 226, 0.3);
+      }
+    }
+
+    /* Imagen de corazón */
+    .heart-image {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 15px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: nightHeartBeat 3s ease-in-out infinite;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 
+        0 0 30px rgba(186, 85, 211, 0.6),
+        0 0 60px rgba(138, 43, 226, 0.4),
+        inset 0 0 20px rgba(218, 112, 214, 0.3);
+      border: 3px solid rgba(147, 112, 219, 0.7);
+      position: relative;
+    }
+
+    .heart-image::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, #9370db, #ba55d3, #8a2be2, #da70d6);
+      border-radius: 50%;
+      z-index: -1;
+      animation: nightBorderGlow 4s ease-in-out infinite;
+    }
+
+    @keyframes nightBorderGlow {
+      0%, 100% {
+        opacity: 0.7;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+    }
+
+    .heart-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      filter: brightness(1.2) contrast(1.2) saturate(1.1) hue-rotate(-10deg);
+    }
+
+    @keyframes nightHeartBeat {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 
+          0 0 30px rgba(186, 85, 211, 0.6),
+          0 0 60px rgba(138, 43, 226, 0.4),
+          inset 0 0 20px rgba(218, 112, 214, 0.3);
+      }
+      50% {
+        transform: scale(1.2);
+        box-shadow: 
+          0 0 40px rgba(186, 85, 211, 0.8),
+          0 0 80px rgba(138, 43, 226, 0.6),
+          inset 0 0 30px rgba(218, 112, 214, 0.4);
+      }
+    }
+
+    /* Texto de contraseña */
+    .password-title {
+      font-size: 1.7em;
+      color: rgba(255, 255, 255, 0.9);
+      font-style: italic;
+      margin-bottom: 8px;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .password-subtitle {
+      font-size: 1.1em;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Input de contraseña */
+    .password-input {
+      width: 250px;
+      height: 45px;
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid rgba(231, 76, 60, 0.5);
+      border-radius: 25px;
+      font-size: 1.4em;
+      text-align: center;
+      color: white;
+      margin-bottom: 20px;
+      outline: none;
+      letter-spacing: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .password-input::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+      letter-spacing: normal;
+    }
+
+    .password-input:focus {
+      border-color: #e74c3c;
+      box-shadow: 0 0 20px rgba(231, 76, 60, 0.5);
+      transform: scale(1.05);
+    }
+
+    /* Teclado numérico */
+    .number-pad {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      gap: 8px;
+      width: 220px;
+      margin: 0 auto 20px auto;
+      justify-items: center;
+      align-items: center;
+      padding: 5px;
+    }
+
+    .number-button {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #8a2be2, #4b0082);
+      border: none;
+      border-radius: 50%;
+      color: white;
+      font-size: 1.6em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 
+        0 5px 15px rgba(138, 43, 226, 0.5),
+        0 0 20px rgba(186, 85, 211, 0.3);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .number-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(218, 112, 214, 0.4), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .number-button:hover::before {
+      left: 100%;
+    }
+
+    .number-button:hover {
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 
+        0 10px 25px rgba(138, 43, 226, 0.7),
+        0 0 30px rgba(186, 85, 211, 0.5);
+      background: linear-gradient(135deg, #9370db, #6a0dad);
+    }
+
+    .number-button:active {
+      transform: translateY(-2px) scale(1.05);
+      transition: all 0.1s ease;
+    }
+
+    /* Botones especiales */
+    .special-button {
+      background: linear-gradient(135deg, #daa520, #b8860b) !important;
+      font-size: 1.5em;
+    }
+
+    .special-button:hover {
+      box-shadow: 
+        0 10px 25px rgba(218, 165, 32, 0.7),
+        0 0 30px rgba(184, 134, 11, 0.5) !important;
+      background: linear-gradient(135deg, #ffd700, #cd853f) !important;
+    }
+
+    /* Botón de entrar */
+    .enter-button {
+      background: linear-gradient(135deg, #9370db, #8a2be2);
+      border: none;
+      padding: 15px 40px;
+      border-radius: 25px;
+      color: white;
+      font-size: 1.3em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 
+        0 10px 20px rgba(147, 112, 219, 0.5),
+        0 0 30px rgba(138, 43, 226, 0.3);
+      position: relative;
+      overflow: hidden;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .enter-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(218, 112, 214, 0.4), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .enter-button:hover::before {
+      left: 100%;
+    }
+
+    .enter-button:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 
+        0 15px 30px rgba(147, 112, 219, 0.7),
+        0 0 40px rgba(138, 43, 226, 0.5);
+      background: linear-gradient(135deg, #ba55d3, #6a0dad);
+    }
+
+    .enter-button:active {
+      transform: translateY(-2px) scale(1.02);
+      transition: all 0.1s ease;
+    }
+
+    /* Mensaje de error */
+    .error-message {
+      color: #e74c3c;
+      font-size: 1.1em;
+      margin-top: 15px;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+    }
+
+    .error-message.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        padding-top: 80px;
+      }
+      
+      .main-title {
+        font-size: 1.8em;
+        top: 10px;
+        padding: 6px 15px;
+        max-width: 90%;
+      }
+      
+      .password-container {
+        padding: 20px;
+        max-width: 340px;
+        width: 80%;
+      }
+      
+      .heart-image {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 12px;
+      }
+      
+      .password-input {
+        width: 220px;
+        height: 45px;
+        font-size: 1.3em;
+        margin-bottom: 18px;
+      }
+      
+      .number-button {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5em;
+      }
+      
+      .number-pad {
+        width: 200px;
+        gap: 8px;
+        margin-bottom: 18px;
+        padding: 5px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding-top: 70px;
+      }
+      
+      .main-title {
+        font-size: 1.4em;
+        top: 8px;
+        padding: 5px 12px;
+        max-width: 95%;
+        line-height: 1.2;
+      }
+      
+      .password-container {
+        padding: 18px 15px;
+        max-width: 300px;
+        width: 85%;
+      }
+      
+      .heart-image {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+      }
+      
+      .password-title {
+        font-size: 1.5em;
+        margin-bottom: 6px;
+      }
+      
+      .password-subtitle {
+        font-size: 1em;
+        margin-bottom: 15px;
+      }
+      
+      .password-input {
+        width: 200px;
+        height: 40px;
+        font-size: 1.2em;
+        letter-spacing: 8px;
+        margin-bottom: 15px;
+      }
+      
+      .number-button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3em;
+      }
+      
+      .number-pad {
+        width: 180px;
+        gap: 6px;
+        margin-bottom: 15px;
+        padding: 3px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Partículas de fondo -->
+  <div class="particles"></div>
+
+  <!-- Título principal -->
+  <h1 class="main-title">¡Feliz Aniversario, Mi Niña Bonita!</h1>
+
+  <!-- Container de contraseña -->
+  <div class="password-container">
+    <!-- Imagen de corazón -->
+    <div class="heart-image">
+      <img src="photos/IMG_20250628_180511.jpg" alt="Mi Niña Bonita" />
+    </div>
+
+    <!-- Texto -->
+    <h2 class="password-title">Ingresa la contraseña</h2>
+    <p class="password-subtitle">Pista: Una fecha especial donde comenzó todo</p>
+
+    <!-- Input de contraseña -->
+    <input type="password" class="password-input" id="passwordInput" placeholder="••••••••" maxlength="8" readonly>
+
+    <!-- Teclado numérico -->
+    <div class="number-pad">
+      <button class="number-button" onclick="addNumber('1')">1</button>
+      <button class="number-button" onclick="addNumber('2')">2</button>
+      <button class="number-button" onclick="addNumber('3')">3</button>
+      <button class="number-button" onclick="addNumber('4')">4</button>
+      <button class="number-button" onclick="addNumber('5')">5</button>
+      <button class="number-button" onclick="addNumber('6')">6</button>
+      <button class="number-button" onclick="addNumber('7')">7</button>
+      <button class="number-button" onclick="addNumber('8')">8</button>
+      <button class="number-button" onclick="addNumber('9')">9</button>
+      <button class="number-button special-button" onclick="clearPassword()">✖</button>
+      <button class="number-button" onclick="addNumber('0')">0</button>
+      <button class="number-button special-button" onclick="deleteLastNumber()">#</button>
+    </div>
+
+    <!-- Botón de entrar -->
+    <button class="enter-button" onclick="checkPassword()">Entrar</button>
+
+    <!-- Mensaje de error -->
+    <div class="error-message" id="errorMessage">Contraseña incorrecta. ¡Inténtalo de nuevo!</div>
+  </div>
+
+  <script>
+    let currentPassword = '';
+    const correctPassword = '28122024'; // 28 de diciembre de 2024 - fecha de aniversario
+
+    // Crear partículas de fondo
+    function createParticles() {
+      const particlesContainer = document.querySelector('.particles');
+      const particles = ['�', '🌙', '⭐', '�', '🌟', '✨', '💫', '�', '🌌', '�'];
+      
+      setInterval(() => {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.innerHTML = particles[Math.floor(Math.random() * particles.length)];
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDuration = (Math.random() * 4 + 8) + 's';
+        particle.style.animationDelay = Math.random() * 3 + 's';
+        particle.style.filter = 'drop-shadow(0 0 8px rgba(186, 85, 211, 0.6))';
+        particlesContainer.appendChild(particle);
+
+        setTimeout(() => {
+          particle.remove();
+        }, 12000);
+      }, 1000);
+    }
+
+    // Agregar número al input
+    function addNumber(number) {
+      if (currentPassword.length < 8) {
+        currentPassword += number;
+        updatePasswordDisplay();
+        
+        // Efecto visual en el botón
+        const buttons = document.querySelectorAll('.number-button');
+        buttons.forEach(btn => {
+          if (btn.textContent === number && !btn.classList.contains('special-button')) {
+            btn.style.transform = 'scale(0.9)';
+            setTimeout(() => {
+              btn.style.transform = '';
+            }, 150);
+          }
+        });
+      }
+    }
+
+    // Limpiar contraseña
+    function clearPassword() {
+      currentPassword = '';
+      updatePasswordDisplay();
+      hideError();
+    }
+
+    // Borrar último número
+    function deleteLastNumber() {
+      currentPassword = currentPassword.slice(0, -1);
+      updatePasswordDisplay();
+      hideError();
+    }
+
+    // Actualizar visualización de la contraseña
+    function updatePasswordDisplay() {
+      const input = document.getElementById('passwordInput');
+      input.value = '•'.repeat(currentPassword.length);
+    }
+
+    // Verificar contraseña
+    function checkPassword() {
+      if (currentPassword === correctPassword) {
+        // Contraseña correcta - redirigir a página de aniversario
+        showSuccessAnimation();
+        setTimeout(() => {
+          // Redirigir a la página de 8 meses de aniversario
+          window.location.href = 'aniversario-8-meses.html';
+        }, 2000);
+      } else {
+        // Contraseña incorrecta
+        showError();
+        shakeContainer();
+      }
+    }
+
+    // Mostrar error
+    function showError() {
+      const errorMessage = document.getElementById('errorMessage');
+      errorMessage.classList.add('show');
+    }
+
+    // Ocultar error
+    function hideError() {
+      const errorMessage = document.getElementById('errorMessage');
+      errorMessage.classList.remove('show');
+    }
+
+    // Animación de contenedor cuando hay error
+    function shakeContainer() {
+      const container = document.querySelector('.password-container');
+      container.style.animation = 'none';
+      container.style.transform = 'translateX(-10px)';
+      
+      setTimeout(() => {
+        container.style.transform = 'translateX(10px)';
+      }, 100);
+      
+      setTimeout(() => {
+        container.style.transform = 'translateX(-5px)';
+      }, 200);
+      
+      setTimeout(() => {
+        container.style.transform = 'translateX(5px)';
+      }, 300);
+      
+      setTimeout(() => {
+        container.style.transform = '';
+        container.style.animation = 'containerFloat 4s ease-in-out infinite';
+      }, 400);
+    }
+
+    // Animación de éxito
+    function showSuccessAnimation() {
+      const container = document.querySelector('.password-container');
+      container.style.background = 'linear-gradient(135deg, rgba(39, 174, 96, 0.3), rgba(34, 153, 84, 0.3))';
+      container.style.borderColor = 'rgba(39, 174, 96, 0.5)';
+      
+      // Crear explosión de confeti
+      for (let i = 0; i < 30; i++) {
+        setTimeout(() => {
+          const confetti = document.createElement('div');
+          const confettiItems = ['💕', '💖', '💗', '💘', '💝', '🌹', '🌺', '💐'];
+          confetti.innerHTML = confettiItems[Math.floor(Math.random() * confettiItems.length)];
+          confetti.style.position = 'fixed';
+          confetti.style.left = Math.random() * window.innerWidth + 'px';
+          confetti.style.top = Math.random() * window.innerHeight + 'px';
+          confetti.style.fontSize = (Math.random() * 2 + 2) + 'em';
+          confetti.style.pointerEvents = 'none';
+          confetti.style.zIndex = '1000';
+          confetti.style.animation = 'float 3s ease-out forwards';
+          document.body.appendChild(confetti);
+          
+          setTimeout(() => confetti.remove(), 3000);
+        }, i * 50);
+      }
+    }
+
+    // Eventos de teclado
+    document.addEventListener('keydown', function(event) {
+      if (event.key >= '0' && event.key <= '9') {
+        addNumber(event.key);
+      } else if (event.key === 'Backspace') {
+        deleteLastNumber();
+      } else if (event.key === 'Delete') {
+        clearPassword();
+      } else if (event.key === 'Enter') {
+        checkPassword();
+      }
+    });
+
+    // Inicializar
+    window.onload = function() {
+      createParticles();
+      
+      // Enfocar en el container para que funcionen las teclas
+      document.querySelector('.password-container').focus();
+    };
+
+    // Efectos del mouse
+    document.addEventListener('mousemove', function(e) {
+      if (Math.random() > 0.90) {
+        const sparkle = document.createElement('div');
+        sparkle.innerHTML = '💜';
+        sparkle.style.position = 'fixed';
+        sparkle.style.left = e.clientX + 'px';
+        sparkle.style.top = e.clientY + 'px';
+        sparkle.style.pointerEvents = 'none';
+        sparkle.style.fontSize = '1.5em';
+        sparkle.style.animation = 'float 2s ease-out forwards';
+        sparkle.style.zIndex = '999';
+        sparkle.style.opacity = '0.9';
+        sparkle.style.filter = 'drop-shadow(0 0 10px rgba(186, 85, 211, 0.8))';
+        document.body.appendChild(sparkle);
+        
+        setTimeout(() => sparkle.remove(), 2000);
+      }
+    });
+  </script>
+</body>
+</html>

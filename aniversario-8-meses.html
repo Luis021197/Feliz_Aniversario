@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¡Amor Infinito Mi Niña Bonita! ∞💕</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #16213e 75%, #1a1a2e 100%);
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Corazones flotantes */
+    .floating-hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .floating-heart {
+      position: absolute;
+      font-size: 30px;
+      color: rgba(255, 255, 255, 0.8);
+      animation: floatUp 12s infinite linear;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) rotate(0deg) scale(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+        transform: translateY(90vh) rotate(45deg) scale(1);
+      }
+      90% {
+        opacity: 1;
+        transform: translateY(10vh) rotate(315deg) scale(1.2);
+      }
+      100% {
+        transform: translateY(-10vh) rotate(360deg) scale(0);
+        opacity: 0;
+      }
+    }
+
+    /* Título principal */
+    .anniversary-title {
+      position: absolute;
+      top: 3%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 4.5em;
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+      text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+      animation: titlePulse 3s ease-in-out infinite;
+      z-index: 10;
+      white-space: nowrap;
+      width: auto;
+      max-width: 95%;
+      padding: 0 10px;
+    }
+
+    @keyframes titlePulse {
+      0%, 100% {
+        transform: translateX(-50%) scale(1);
+        color: #fff;
+        text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+      }
+      50% {
+        transform: translateX(-50%) scale(1.05);
+        color: #ffd700;
+        text-shadow: 4px 4px 30px rgba(255, 215, 0, 0.6);
+      }
+    }
+
+    /* Contenedor principal */
+    .anniversary-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      position: relative;
+      z-index: 3;
+    }
+
+    /* Tarjeta de aniversario */
+    .anniversary-card {
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(20px);
+      border: 3px solid rgba(255, 255, 255, 0.4);
+      border-radius: 35px;
+      padding: 60px;
+      max-width: 800px;
+      text-align: center;
+      box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
+      animation: cardFloat 5s ease-in-out infinite;
+      margin-top: 200px;
+    }
+
+    @keyframes cardFloat {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.15);
+      }
+      50% {
+        transform: translateY(-15px) scale(1.02);
+        box-shadow: 0 50px 100px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .months-display {
+      font-size: 8em;
+      color: #ff1744;
+      margin-bottom: 30px;
+      text-shadow: 3px 3px 15px rgba(255, 23, 68, 0.5);
+      animation: numberGlow 2s ease-in-out infinite;
+    }
+
+    @keyframes numberGlow {
+      0%, 100% {
+        color: #ff1744;
+        text-shadow: 3px 3px 15px rgba(255, 23, 68, 0.5);
+        transform: scale(1);
+      }
+      50% {
+        color: #ff6b9d;
+        text-shadow: 3px 3px 25px rgba(255, 107, 157, 0.8);
+        transform: scale(1.1);
+      }
+    }
+
+    .anniversary-message {
+      font-size: 1.5em;
+      line-height: 2;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      min-height: 250px;
+    }
+
+    /* Cursor parpadeante */
+    .typing-cursor {
+      border-right: 4px solid rgba(255, 255, 255, 0.9);
+      animation: blinkCursor 1s infinite;
+    }
+
+    @keyframes blinkCursor {
+      0%, 50% {
+        border-color: rgba(255, 255, 255, 0.9);
+      }
+      51%, 100% {
+        border-color: transparent;
+      }
+    }
+
+    /* Contenedor de foto romántica */
+    .romantic-photo {
+      margin: 40px 0 30px 0;
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .photo-frame {
+      position: relative;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+      animation: photoGlow 4s ease-in-out infinite;
+      max-width: 300px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 3px solid rgba(255, 255, 255, 0.3);
+    }
+
+    @keyframes photoGlow {
+      0%, 100% {
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+        transform: scale(1);
+      }
+      50% {
+        box-shadow: 0 30px 60px rgba(255, 107, 157, 0.3);
+        transform: scale(1.02);
+      }
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 22px;
+      transition: transform 0.3s ease;
+    }
+
+    .photo-frame:hover img {
+      transform: scale(1.05);
+    }
+
+    .photo-hearts {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      font-size: 2em;
+      color: #ff1744;
+      animation: heartFloat 3s ease-in-out infinite;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes heartFloat {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-10px) rotate(10deg);
+      }
+    }
+
+    .photo-placeholder {
+      width: 280px;
+      height: 200px;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.1em;
+      text-align: center;
+      line-height: 1.5;
+      border-radius: 22px;
+      border: 2px dashed rgba(255, 255, 255, 0.3);
+    }
+
+    .photo-placeholder-icon {
+      font-size: 3em;
+      margin-bottom: 15px;
+      opacity: 0.6;
+    }
+
+    /* Responsive para foto */
+    @media (max-width: 768px) {
+      .photo-frame {
+        max-width: 250px;
+      }
+      
+      .photo-placeholder {
+        width: 230px;
+        height: 170px;
+        font-size: 1em;
+      }
+      
+      .photo-placeholder-icon {
+        font-size: 2.5em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .photo-frame {
+        max-width: 200px;
+      }
+      
+      .photo-placeholder {
+        width: 180px;
+        height: 140px;
+        font-size: 0.9em;
+      }
+      
+      .photo-placeholder-icon {
+        font-size: 2em;
+      }
+    }
+
+    /* Decoración de flores */
+    .flower-decoration {
+      font-size: 3.5em;
+      margin: 30px 0;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .flower-decoration span {
+      display: inline-block;
+      animation: flowerDance 4s ease-in-out infinite;
+    }
+
+    .flower-decoration span:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .flower-decoration span:nth-child(2) {
+      animation-delay: 0.7s;
+    }
+
+    .flower-decoration span:nth-child(3) {
+      animation-delay: 1.4s;
+    }
+
+    .flower-decoration span:nth-child(4) {
+      animation-delay: 2.1s;
+    }
+
+    @keyframes flowerDance {
+      0%, 100% {
+        transform: scale(1) rotate(0deg);
+        color: #ff6b9d;
+      }
+      25% {
+        transform: scale(1.2) rotate(5deg);
+        color: #ff1744;
+      }
+      50% {
+        transform: scale(1.4) rotate(-5deg);
+        color: #ffd700;
+      }
+      75% {
+        transform: scale(1.2) rotate(5deg);
+        color: #ff6b9d;
+      }
+    }
+
+    /* Botón especial */
+    .celebration-button {
+      background: linear-gradient(45deg, #ffd700, #ff6b9d, #ff1744);
+      background-size: 300% 300%;
+      border: none;
+      padding: 20px 45px;
+      border-radius: 70px;
+      color: white;
+      font-size: 1.3em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 20px 40px rgba(255, 107, 157, 0.4);
+      margin-top: 30px;
+      position: relative;
+      overflow: hidden;
+      animation: gradientShift 4s ease infinite, buttonBounce 3s ease-in-out infinite;
+    }
+
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @keyframes buttonBounce {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    .celebration-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+      transition: left 0.7s ease;
+    }
+
+    .celebration-button:hover::before {
+      left: 100%;
+    }
+
+    .celebration-button:hover {
+      transform: translateY(-10px) scale(1.15);
+      box-shadow: 0 35px 70px rgba(255, 107, 157, 0.6);
+    }
+
+    .celebration-button:active {
+      transform: translateY(-5px) scale(1.1);
+      transition: all 0.1s ease;
+    }
+
+    /* Contador de días juntos */
+    .days-counter-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(25px);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 30px;
+      padding: 40px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+      margin: 40px auto 20px auto;
+      animation: daysFloat 6s ease-in-out infinite;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @keyframes daysFloat {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+      }
+      50% {
+        transform: translateY(-8px) rotate(0.5deg);
+        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    .days-title {
+      font-size: 2em;
+      font-weight: bold;
+      color: #ffd700;
+      margin-bottom: 25px;
+      text-shadow: 2px 2px 15px rgba(255, 215, 0, 0.6);
+      animation: titleShimmer 4s ease-in-out infinite;
+    }
+
+    @keyframes titleShimmer {
+      0%, 100% {
+        color: #ffd700;
+        text-shadow: 2px 2px 15px rgba(255, 215, 0, 0.6);
+      }
+      50% {
+        color: #fff;
+        text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    .time-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 20px;
+      padding: 0 20px;
+    }
+
+    .time-unit {
+      text-align: center;
+      flex: 0 0 auto;
+      min-width: 120px;
+      max-width: 140px;
+    }
+
+    .time-display {
+      font-size: 3.5em;
+      font-weight: bold;
+      color: #ff6b9d;
+      margin-bottom: 8px;
+      text-shadow: 3px 3px 20px rgba(255, 107, 157, 0.7);
+      animation: daysGlow 3s ease-in-out infinite;
+      line-height: 1;
+    }
+
+    .time-label {
+      font-size: 1.2em;
+      color: rgba(255, 255, 255, 0.9);
+      text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+      font-weight: 500;
+    }
+
+    .time-separator {
+      font-size: 2em;
+      color: #ffd700;
+      animation: heartBeat 2s ease-in-out infinite;
+      flex: 0 0 auto;
+      min-width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @keyframes heartBeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    @keyframes daysGlow {
+      0%, 100% {
+        color: #ff6b9d;
+        text-shadow: 3px 3px 20px rgba(255, 107, 157, 0.7);
+        transform: scale(1);
+      }
+      50% {
+        color: #ff1744;
+        text-shadow: 3px 3px 30px rgba(255, 23, 68, 0.9);
+        transform: scale(1.03);
+      }
+    }
+
+    .love-progress {
+      position: relative;
+      margin-top: 20px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .progress-bar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #ffd700, #ff6b9d, #ff1744);
+      border-radius: 20px;
+      animation: progressFill 3s ease-out forwards;
+    }
+
+    @keyframes progressFill {
+      0% {
+        width: 0%;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+
+    .progress-text {
+      font-size: 1.1em;
+      color: rgba(255, 255, 255, 0.8);
+      text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+      animation: textFade 2s ease-in-out infinite;
+    }
+
+    @keyframes textFade {
+      0%, 100% {
+        opacity: 0.8;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+
+    /* Estrellas brillantes */
+    .twinkling-stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .star {
+      position: absolute;
+      font-size: 25px;
+      color: rgba(255, 255, 255, 0.9);
+      animation: twinkle 3s infinite;
+    }
+
+    @keyframes twinkle {
+      0%, 100% {
+        opacity: 0.3;
+        transform: scale(0.8) rotate(0deg);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.2) rotate(180deg);
+      }
+    }
+
+    /* Carta de Amor */
+    .love-letter-container {
+      margin: 40px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .love-letter {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%);
+      backdrop-filter: blur(20px);
+      border: 3px solid rgba(255, 255, 255, 0.4);
+      border-radius: 25px;
+      padding: 40px 50px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      max-width: 350px;
+      animation: letterFloat 6s ease-in-out infinite;
+      box-shadow: 0 25px 50px rgba(255, 107, 157, 0.3);
+    }
+
+    @keyframes letterFloat {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+        box-shadow: 0 25px 50px rgba(255, 107, 157, 0.3);
+      }
+      50% {
+        transform: translateY(-10px) rotate(1deg);
+        box-shadow: 0 35px 70px rgba(255, 107, 157, 0.4);
+      }
+    }
+
+    .love-letter::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.8s ease;
+    }
+
+    .love-letter:hover::before {
+      left: 100%;
+    }
+
+    .love-letter:hover {
+      transform: translateY(-15px) scale(1.05);
+      box-shadow: 0 40px 80px rgba(255, 107, 157, 0.5);
+      border-color: rgba(255, 215, 0, 0.6);
+    }
+
+    .letter-heart {
+      font-size: 4em;
+      margin-bottom: 20px;
+      animation: heartPulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes heartPulse {
+      0%, 100% {
+        transform: scale(1);
+        filter: brightness(1);
+      }
+      50% {
+        transform: scale(1.1);
+        filter: brightness(1.2);
+      }
+    }
+
+    .letter-title {
+      font-size: 2.2em;
+      font-weight: bold;
+      color: #ffd700;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 15px rgba(255, 215, 0, 0.6);
+      animation: titleGlow 3s ease-in-out infinite;
+    }
+
+    @keyframes titleGlow {
+      0%, 100% {
+        color: #ffd700;
+        text-shadow: 2px 2px 15px rgba(255, 215, 0, 0.6);
+      }
+      50% {
+        color: #fff;
+        text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.8);
+      }
+    }
+
+    .letter-subtitle {
+      font-size: 1.4em;
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .letter-click-hint {
+      font-size: 1.1em;
+      color: rgba(255, 255, 255, 0.7);
+      animation: hintBlink 2s ease-in-out infinite;
+    }
+
+    @keyframes hintBlink {
+      0%, 100% {
+        opacity: 0.7;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+
+    /* Modal de la Carta */
+    .letter-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      animation: modalFadeIn 0.5s ease-out;
+    }
+
+    .letter-modal.show {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @keyframes modalFadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .letter-modal-content {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+      border-radius: 25px;
+      padding: 50px;
+      max-width: 700px;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: 0 50px 100px rgba(0, 0, 0, 0.3);
+      animation: modalSlideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      margin: 20px;
+      border: 3px solid rgba(255, 215, 0, 0.3);
+    }
+
+    @keyframes modalSlideIn {
+      from {
+        transform: translateY(-50px) scale(0.9);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+    }
+
+    .letter-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2em;
+      cursor: pointer;
+      color: #666;
+      transition: all 0.3s ease;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .letter-close:hover {
+      color: #ff1744;
+      background: rgba(255, 255, 255, 1);
+      transform: scale(1.1);
+    }
+
+    .letter-header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+    }
+
+    .letter-envelope {
+      font-size: 4em;
+      margin-bottom: 20px;
+      animation: envelopeBounce 3s ease-in-out infinite;
+    }
+
+    @keyframes envelopeBounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .letter-modal-title {
+      font-size: 2.5em;
+      color: #1a1a2e;
+      margin-bottom: 15px;
+      font-weight: bold;
+      text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.3);
+    }
+
+    .letter-modal-subtitle {
+      font-size: 1.4em;
+      color: #666;
+      font-style: italic;
+    }
+
+    .letter-content {
+      color: #333;
+      line-height: 1.8;
+    }
+
+    .letter-message {
+      font-size: 1.3em;
+      margin-bottom: 40px;
+      text-align: left;
+      padding: 30px;
+      background: rgba(255, 215, 0, 0.1);
+      border-radius: 15px;
+      border-left: 5px solid #ffd700;
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+    }
+
+    .letter-signature {
+      text-align: right;
+      margin-bottom: 30px;
+      font-style: italic;
+      color: #666;
+    }
+
+    .signature-name {
+      font-size: 1.2em;
+      color: #ff1744;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .letter-navigation {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 2px solid rgba(255, 215, 0, 0.3);
+    }
+
+    .letter-nav-btn {
+      background: linear-gradient(45deg, #ffd700, #ff6b9d);
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 1em;
+    }
+
+    .letter-nav-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(255, 215, 0, 0.4);
+    }
+
+    .letter-nav-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+
+    .letter-counter {
+      font-weight: bold;
+      color: #666;
+      font-size: 1.1em;
+    }
+
+    /* Responsive para carta */
+    @media (max-width: 768px) {
+      .love-letter {
+        padding: 30px 35px;
+        max-width: 300px;
+      }
+
+      .letter-title {
+        font-size: 1.8em;
+      }
+
+      .letter-subtitle {
+        font-size: 1.2em;
+      }
+
+      .letter-modal-content {
+        padding: 40px 30px;
+        margin: 15px;
+      }
+
+      .letter-modal-title {
+        font-size: 2em;
+      }
+
+      .letter-message {
+        font-size: 1.2em;
+        padding: 25px;
+      }
+
+      .letter-navigation {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .letter-nav-btn {
+        width: 100%;
+        max-width: 200px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .love-letter {
+        padding: 25px 30px;
+        max-width: 280px;
+      }
+
+      .letter-heart {
+        font-size: 3em;
+      }
+
+      .letter-title {
+        font-size: 1.6em;
+      }
+
+      .letter-modal-content {
+        padding: 30px 20px;
+        margin: 10px;
+      }
+
+      .letter-modal-title {
+        font-size: 1.8em;
+      }
+
+      .letter-message {
+        font-size: 1.1em;
+        padding: 20px;
+        min-height: 180px;
+      }
+    }
+
+    /* Cuadro de mensaje romántico */
+    .romantic-quote-box {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(25px);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 25px;
+      padding: 40px;
+      max-width: 600px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+      margin: 40px auto;
+      animation: quoteFloat 7s ease-in-out infinite;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @keyframes quoteFloat {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+      }
+      50% {
+        transform: translateY(-12px) rotate(0.3deg);
+        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    .romantic-quote {
+      font-size: 1.8em;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.95);
+      text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+      line-height: 1.6;
+      margin-bottom: 25px;
+      animation: quoteGlow 4s ease-in-out infinite;
+    }
+
+    @keyframes quoteGlow {
+      0%, 100% {
+        color: rgba(255, 255, 255, 0.95);
+        text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+      }
+      50% {
+        color: #ffd700;
+        text-shadow: 2px 2px 20px rgba(255, 215, 0, 0.6);
+      }
+    }
+
+    .quote-decoration {
+      font-size: 3em;
+      color: #ff6b9d;
+      margin-bottom: 20px;
+      animation: decorationPulse 3s ease-in-out infinite;
+    }
+
+    @keyframes decorationPulse {
+      0%, 100% {
+        transform: scale(1);
+        color: #ff6b9d;
+      }
+      50% {
+        transform: scale(1.1);
+        color: #ff1744;
+      }
+    }
+
+    /* Responsive para cuadro romántico */
+    @media (max-width: 768px) {
+      .romantic-quote-box {
+        padding: 30px;
+        margin: 30px auto;
+        width: 85%;
+      }
+
+      .romantic-quote {
+        font-size: 1.5em;
+      }
+
+      .quote-decoration {
+        font-size: 2.5em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .romantic-quote-box {
+        padding: 25px;
+        margin: 25px auto;
+        width: 90%;
+      }
+
+      .romantic-quote {
+        font-size: 1.3em;
+      }
+
+      .quote-decoration {
+        font-size: 2em;
+      }
+    }
+
+    /* Footer */
+    .footer {
+      position: static;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 15px 20px;
+      font-size: 0.9em;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 40px;
+    }
+
+    .footer-text {
+      animation: footerGlow 3s ease-in-out infinite;
+    }
+
+    @keyframes footerGlow {
+      0%, 100% {
+        color: rgba(255, 255, 255, 0.8);
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+      }
+      50% {
+        color: rgba(255, 215, 0, 0.9);
+        text-shadow: 1px 1px 10px rgba(255, 215, 0, 0.5);
+      }
+    }
+
+    /* Responsive para footer */
+    @media (max-width: 480px) {
+      .footer {
+        font-size: 0.8em;
+        padding: 12px 15px;
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .anniversary-title {
+        font-size: 3em;
+        white-space: normal;
+        line-height: 1.2;
+        top: 2%;
+        max-width: 90%;
+        padding: 0 15px;
+      }
+      
+      .anniversary-card {
+        padding: 40px;
+        margin: 10px;
+        margin-top: 220px;
+      }
+      
+      .months-display {
+        font-size: 6em;
+      }
+      
+      .anniversary-message {
+        font-size: 1.3em;
+      }
+      
+      .flower-decoration {
+        font-size: 2.8em;
+      }
+
+      .days-counter-card {
+        padding: 30px;
+        margin: 30px 10px 20px 10px;
+      }
+
+      .days-title {
+        font-size: 1.7em;
+      }
+
+      .time-display {
+        font-size: 2.8em;
+      }
+
+      .time-label {
+        font-size: 1em;
+      }
+
+      .time-separator {
+        font-size: 1.8em;
+      }
+
+      .days-subtitle {
+        font-size: 1.1em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .anniversary-title {
+        font-size: 2.2em;
+        top: 1.5%;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 85%;
+        padding: 0 15px;
+        line-height: 1.3;
+      }
+      
+      .anniversary-card {
+        padding: 25px;
+        margin-top: 200px;
+      }
+      
+      .months-display {
+        font-size: 4.5em;
+      }
+
+      .days-counter-card {
+        padding: 25px;
+        margin: 25px 15px 20px 15px;
+      }
+
+      .days-title {
+        font-size: 1.5em;
+      }
+
+      .time-display {
+        font-size: 2.5em;
+      }
+
+      .time-label {
+        font-size: 0.9em;
+      }
+
+      .time-separator {
+        font-size: 1.5em;
+        min-width: 30px;
+      }
+
+      .time-row {
+        gap: 20px;
+        padding: 0 10px;
+      }
+
+      .time-unit {
+        min-width: 80px;
+        max-width: 100px;
+      }
+
+      .progress-text {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Título principal -->
+  <h1 class="anniversary-title">¡Amor Infinito! ∞💕</h1>
+
+  <!-- Corazones flotantes -->
+  <div class="floating-hearts"></div>
+
+  <!-- Estrellas brillantes -->
+  <div class="twinkling-stars"></div>
+
+  <!-- Contenido principal -->
+  <div class="anniversary-container">
+    <div class="anniversary-card">
+      <div class="months-display">∞</div>
+      
+      <div class="anniversary-message">
+        <p id="anniversaryMessage" class="typing-cursor"></p>
+      </div>
+
+      <!-- Foto romántica -->
+      <div class="romantic-photo">
+        <div class="photo-frame">
+          <div class="photo-hearts">💕</div>
+          <!-- Nuestra foto especial de aniversario -->
+          <img src="photos/nuestra-foto-aniversario.jpg" alt="Nuestra foto de amor en la playa 💕" id="couplePhoto">
+        </div>
+      </div>
+
+      <div class="flower-decoration">
+        <span>🌺</span>
+        <span>💖</span>
+        <span>🌹</span>
+        <span>💕</span>
+      </div>
+
+      <!-- Carta de Amor -->
+      <div class="love-letter-container">
+        <div class="love-letter" id="loveLetter">
+          <div class="letter-heart">💌</div>
+          <div class="letter-title">Carta de Amor Infinito</div>
+          <div class="letter-subtitle">Para mi niña bonita ∞</div>
+          <div class="letter-click-hint">Haz clic para leer nuestra carta ✨</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contador de días juntos -->
+    <div class="days-counter-card">
+      <div class="days-title">💫 Tiempo Juntos 💫</div>
+      
+      <!-- Contador de meses -->
+      <div class="time-row">
+        <div class="time-unit">
+          <div class="time-display" id="monthsCounter">0</div>
+          <div class="time-label">meses</div>
+        </div>
+        <div class="time-separator">💕</div>
+        <div class="time-unit">
+          <div class="time-display" id="daysCounter">0</div>
+          <div class="time-label">días</div>
+        </div>
+      </div>
+      
+      <div class="love-progress">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </div>
+
+    <!-- Cuadro de mensaje romántico -->
+    <div class="romantic-quote-box">
+      <div class="quote-decoration">💖</div>
+      <div class="romantic-quote">
+        "Tú eres mi hogar, mi refugio, mi amor por siempre."
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de la Carta de Amor -->
+  <div class="letter-modal" id="letterModal">
+    <div class="letter-modal-content">
+      <div class="letter-close" id="letterClose">✕</div>
+      <div class="letter-header">
+        <div class="letter-envelope">💌</div>
+        <h2 class="letter-modal-title">Carta de Amor Infinito</h2>
+        <p class="letter-modal-subtitle">Para ti, mi niña bonita ∞💕</p>
+      </div>
+      <div class="letter-content">
+        <div class="letter-message" id="letterMessage"></div>
+        <div class="letter-signature">
+          <p>Con todo mi amor infinito,</p>
+          <p class="signature-name">Tu monito tocón 💕∞</p>
+        </div>
+        <div class="letter-navigation">
+          <button class="letter-nav-btn" id="prevMessage">← Anterior</button>
+          <span class="letter-counter" id="letterCounter">1 de 7</span>
+          <button class="letter-nav-btn" id="nextMessage">Siguiente →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-text">© 2025 Creado con amor para Mi Hermoso Atardecer &lt;3</div>
+  </footer>
+
+  <!-- Audio -->
+  <audio id="backgroundMusic" autoplay loop preload="auto" style="display: none;">
+    <source src="music/mi-nina-bonita.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+  <script>
+    // Mensajes de aniversario románticos (cortos para typewriter)
+    const anniversaryMessages = [
+      "Amor infinito ∞ Mi niña bonita 💕",
+      "Eres mi eternidad ∞ Mi todo 🌙",
+      "Nuestro amor es infinito ∞ Como el universo ✨",
+      "Te amaré infinitamente ∞ Para siempre 💖",
+      "Amor que se multiplica ∞ Cada día 🌹", 
+      "Sin fin como el infinito ∞ Nuestra historia 👑",
+      "Paraíso infinito ∞ Contigo mi amor 💝"
+    ];
+
+    let currentMessage = 0;
+    let i = 0;
+    const speed = 65;
+    const messageElement = document.getElementById("anniversaryMessage");
+
+    function typeWriter() {
+      if (currentMessage < anniversaryMessages.length) {
+        if (i < anniversaryMessages[currentMessage].length) {
+          messageElement.innerHTML += anniversaryMessages[currentMessage].charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        } else {
+          // Mensaje completado, esperar y continuar
+          setTimeout(() => {
+            messageElement.innerHTML = "";
+            i = 0;
+            currentMessage++;
+            if (currentMessage < anniversaryMessages.length) {
+              typeWriter();
+            } else {
+              // Reiniciar ciclo
+              currentMessage = 0;
+              setTimeout(typeWriter, 5000);
+            }
+          }, 4500);
+        }
+      }
+    }
+
+    // Crear corazones flotantes
+    function createFloatingHearts() {
+      const heartsContainer = document.querySelector('.floating-hearts');
+      setInterval(() => {
+        const heart = document.createElement('div');
+        heart.className = 'floating-heart';
+        heart.innerHTML = ['💕', '💖', '💗', '💘', '💝', '🧡'][Math.floor(Math.random() * 6)];
+        heart.style.left = Math.random() * 100 + '%';
+        heart.style.animationDuration = (Math.random() * 4 + 10) + 's';
+        heart.style.animationDelay = Math.random() * 2 + 's';
+        heartsContainer.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 14000);
+      }, 1200);
+    }
+
+    // Crear estrellas brillantes
+    function createTwinklingStars() {
+      const starsContainer = document.querySelector('.twinkling-stars');
+      setInterval(() => {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.innerHTML = '⭐';
+        star.style.left = Math.random() * 100 + '%';
+        star.style.top = Math.random() * 100 + '%';
+        star.style.animationDelay = Math.random() * 3 + 's';
+        starsContainer.appendChild(star);
+
+        setTimeout(() => {
+          star.remove();
+        }, 3000);
+      }, 1000);
+    }
+
+    // Función de celebración
+    function celebrate() {
+      const button = document.querySelector('.celebration-button');
+      
+      // Animación de click
+      button.style.animation = 'none';
+      button.style.transform = 'scale(0.9)';
+      
+      setTimeout(() => {
+        button.innerHTML = '∞ ¡Te amo infinitamente! ∞';
+        button.style.background = 'linear-gradient(45deg, #00b894, #00cec9, #74b9ff)';
+        button.style.transform = 'scale(1.2)';
+      }, 150);
+      
+      // Crear explosión de fuegos artificiales
+      for (let i = 0; i < 25; i++) {
+        setTimeout(() => {
+          const firework = document.createElement('div');
+          const fireworks = ['🎆', '🎇', '✨', '🌟', '💫', '⭐'];
+          firework.innerHTML = fireworks[Math.floor(Math.random() * fireworks.length)];
+          firework.style.position = 'fixed';
+          firework.style.left = Math.random() * window.innerWidth + 'px';
+          firework.style.top = Math.random() * window.innerHeight + 'px';
+          firework.style.fontSize = (Math.random() * 2.5 + 2) + 'em';
+          firework.style.pointerEvents = 'none';
+          firework.style.animation = 'fireworkExplode ' + (Math.random() * 2 + 3) + 's ease-out forwards';
+          firework.style.zIndex = '1000';
+          document.body.appendChild(firework);
+          
+          setTimeout(() => firework.remove(), 5000);
+        }, i * 80);
+      }
+
+      // Restaurar botón
+      setTimeout(() => {
+        button.innerHTML = '∞ ¡Celebremos nuestro amor infinito! ∞';
+        button.style.background = 'linear-gradient(45deg, #ffd700, #ff6b9d, #ff1744)';
+        button.style.transform = 'scale(1)';
+        button.style.animation = 'gradientShift 4s ease infinite, buttonBounce 3s ease-in-out infinite';
+      }, 4500);
+    }
+
+    // Configurar música
+    const audio = document.getElementById('backgroundMusic');
+    audio.volume = 0.3;
+
+    // Calcular tiempo juntos (meses y días)
+    function calculateTimeTogether() {
+      // Fecha de inicio de la relación - 28 de diciembre de 2024
+      const startDate = new Date('2024-12-28');
+      const currentDate = new Date();
+      
+      // Calcular diferencia en milisegundos
+      const timeDifference = currentDate.getTime() - startDate.getTime();
+      
+      // Convertir a días totales desde el inicio
+      const totalDays = Math.floor(timeDifference / (1000 * 3600 * 24));
+      
+      // Calcular meses completos
+      let months = 0;
+      let tempDate = new Date(startDate);
+      
+      // Contar meses completos
+      while (tempDate.setMonth(tempDate.getMonth() + 1) <= currentDate) {
+        months++;
+      }
+      
+      return {
+        totalDays: totalDays,  // Total de días desde el 28 de diciembre
+        months: months,        // Meses completos
+        days: totalDays        // Mismo valor - total de días
+      };
+    }
+
+    // Funcionalidad de la Carta de Amor
+    const loveLetterMessages = [
+      "Mi amor por ti es infinito como las estrellas en el cielo. Contigo a mi lado he confirmado que mi corazón te pertenece para siempre ∞💕",
+      "Has sido mi infinito en un mundo finito. Eres mi eternidad, mi paz, mi todo mi niña bonita 🌙∞",
+      "Nuestro amor trasciende el tiempo y el espacio, es infinito como el universo. Contigo cada momento se siente como una hermosa eternidad ∞",
+      "Desde que éramos niños supe que eras para mí. Ahora confirmo que te amaré por un tiempo infinito 💕∞",
+      "Nuestro amor se multiplica infinitamente cada día. Eres mi razón de ser, mi inspiración eterna ∞🌹",
+      "Como el símbolo del infinito, nuestro amor no tiene fin. Juntos somos solo el comienzo de nuestra historia infinita 👑💖∞",
+      "Tu sonrisa ilumina mi mundo de manera infinita. Contigo he encontrado el paraíso en la tierra, mi amor eterno ∞✨💝"
+    ];
+
+    let currentLetterMessage = 0;
+
+    function openLetter() {
+      const modal = document.getElementById('letterModal');
+      modal.classList.add('show');
+      showLetterMessage(0);
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLetter() {
+      const modal = document.getElementById('letterModal');
+      modal.classList.remove('show');
+      document.body.style.overflow = 'auto';
+    }
+
+    function showLetterMessage(index) {
+      currentLetterMessage = index;
+      const messageElement = document.getElementById('letterMessage');
+      const counterElement = document.getElementById('letterCounter');
+      const prevBtn = document.getElementById('prevMessage');
+      const nextBtn = document.getElementById('nextMessage');
+      
+      messageElement.textContent = loveLetterMessages[index];
+      counterElement.textContent = `${index + 1} de ${loveLetterMessages.length}`;
+      
+      prevBtn.disabled = index === 0;
+      nextBtn.disabled = index === loveLetterMessages.length - 1;
+    }
+
+    function nextLetterMessage() {
+      if (currentLetterMessage < loveLetterMessages.length - 1) {
+        showLetterMessage(currentLetterMessage + 1);
+      }
+    }
+
+    function prevLetterMessage() {
+      if (currentLetterMessage > 0) {
+        showLetterMessage(currentLetterMessage - 1);
+      }
+    }
+
+    // Animar contadores de tiempo
+    function animateTimeCounters() {
+      const timeData = calculateTimeTogether();
+      const monthsElement = document.getElementById('monthsCounter');
+      const daysElement = document.getElementById('daysCounter');
+      
+      // Animar meses
+      let currentMonths = 0;
+      const monthsInterval = setInterval(() => {
+        currentMonths++;
+        monthsElement.textContent = currentMonths;
+        if (currentMonths >= timeData.months) {
+          clearInterval(monthsInterval);
+          
+          // Animar días después de terminar meses
+          let currentDays = 0;
+          const daysInterval = setInterval(() => {
+            currentDays++;
+            daysElement.textContent = currentDays;
+            if (currentDays >= timeData.days) {
+              clearInterval(daysInterval);
+            }
+          }, 50);
+        }
+      }, 100);
+    }
+
+    // Inicializar todo
+    window.onload = function() {
+      createFloatingHearts();
+      createTwinklingStars();
+      
+      // Iniciar escritura
+      setTimeout(typeWriter, 2000);
+      
+      // Iniciar contador de tiempo después de un delay
+      setTimeout(animateTimeCounters, 4000);
+      
+      // Reproducir música
+      setTimeout(() => {
+        audio.play().catch(function(error) {
+          console.log('Reproducción automática bloqueada');
+        });
+      }, 2500);
+
+      // Event listeners para la carta
+      const loveLetter = document.getElementById('loveLetter');
+      const letterModal = document.getElementById('letterModal');
+      const letterClose = document.getElementById('letterClose');
+      const prevBtn = document.getElementById('prevMessage');
+      const nextBtn = document.getElementById('nextMessage');
+
+      loveLetter.addEventListener('click', openLetter);
+      letterClose.addEventListener('click', closeLetter);
+      letterModal.addEventListener('click', function(e) {
+        if (e.target === letterModal) {
+          closeLetter();
+        }
+      });
+      prevBtn.addEventListener('click', prevLetterMessage);
+      nextBtn.addEventListener('click', nextLetterMessage);
+
+      // Cerrar carta con ESC
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && letterModal.classList.contains('show')) {
+          closeLetter();
+        }
+      });
+    };
+
+    // Activar música con interacción
+    document.addEventListener('click', function() {
+      if (audio.paused) {
+        audio.play();
+      }
+    }, { once: true });
+
+    // Efectos del mouse
+    document.addEventListener('mousemove', function(e) {
+      if (Math.random() > 0.88) {
+        const sparkle = document.createElement('div');
+        sparkle.innerHTML = '💫';
+        sparkle.style.position = 'fixed';
+        sparkle.style.left = e.clientX + 'px';
+        sparkle.style.top = e.clientY + 'px';
+        sparkle.style.pointerEvents = 'none';
+        sparkle.style.fontSize = '1.8em';
+        sparkle.style.animation = 'twinkle 2s ease-out forwards';
+        sparkle.style.zIndex = '999';
+        document.body.appendChild(sparkle);
+        
+        setTimeout(() => sparkle.remove(), 2000);
+      }
+    });
+
+    // Agregar animación de fuegos artificiales
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes fireworkExplode {
+        0% {
+          opacity: 0;
+          transform: scale(0) rotate(0deg);
+        }
+        20% {
+          opacity: 1;
+          transform: scale(1.5) rotate(90deg);
+        }
+        80% {
+          opacity: 1;
+          transform: scale(2) rotate(270deg);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(0) rotate(360deg);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>
