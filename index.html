@@ -36,7 +36,7 @@
       position: relative;
       overflow: hidden;
       padding-top: 100px;
-      animation: nightShimmer 10s ease-in-out infinite;
+      background-attachment: fixed;
     }
 
     @keyframes nightShimmer {
@@ -90,7 +90,7 @@
 
     /* Corazones flotantes de fondo */
     body::after {
-      content: '� 🌙 � ⭐ � � � 🌙 � ⭐ � � � 🌙 � ⭐ � �';
+      content: '💕 🌙 💖 ⭐ 💗 💜 💘 🌙 💝 ⭐ 🌹 💕 🌺 🌙 💐 ⭐ 💞 💜';
       position: fixed;
       top: -50px;
       left: 0;
@@ -164,8 +164,9 @@
     .main-title {
       position: fixed;
       top: 15px;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0;
+      right: 0;
+      margin: 0 auto;
       font-size: 2.2em;
       font-weight: bold;
       color: #da70d6;
@@ -179,6 +180,7 @@
       z-index: 15;
       line-height: 1.1;
       max-width: 85%;
+      width: fit-content;
       word-wrap: break-word;
       background: 
         linear-gradient(135deg, rgba(75, 0, 130, 0.3) 0%, rgba(138, 43, 226, 0.2) 100%),
@@ -201,7 +203,7 @@
           0 0 30px rgba(218, 112, 214, 0.9),
           0 0 60px rgba(138, 43, 226, 0.6),
           0 0 100px rgba(75, 0, 130, 0.4);
-        transform: translateX(-50%) scale(1);
+        transform: scale(1);
       }
       50% {
         color: #9370db;
@@ -210,7 +212,7 @@
           0 0 40px rgba(147, 112, 219, 1),
           0 0 80px rgba(138, 43, 226, 0.8),
           0 0 120px rgba(75, 0, 130, 0.6);
-        transform: translateX(-50%) scale(1.05);
+        transform: scale(1.05);
       }
     }
 
@@ -222,7 +224,7 @@
       backdrop-filter: blur(30px);
       border: 3px solid rgba(186, 85, 211, 0.5);
       border-radius: 30px;
-      padding: 25px 35px;
+      padding: 30px 40px;
       text-align: center;
       box-shadow: 
         0 30px 60px rgba(0, 0, 0, 0.6),
@@ -231,8 +233,8 @@
       animation: nightContainerFloat 5s ease-in-out infinite;
       position: relative;
       z-index: 5;
-      max-width: 380px;
-      width: 75%;
+      max-width: 420px;
+      width: 85%;
       margin: 0 auto;
     }
 
@@ -518,9 +520,9 @@
       }
       
       .password-container {
-        padding: 20px;
-        max-width: 340px;
-        width: 80%;
+        padding: 25px;
+        max-width: 380px;
+        width: 88%;
       }
       
       .heart-image {
@@ -548,6 +550,16 @@
         margin-bottom: 18px;
         padding: 5px;
       }
+      
+      /* Reducir efectos en móvil para mejor rendimiento */
+      body::after {
+        font-size: 20px;
+        letter-spacing: 35px;
+      }
+      
+      .particle {
+        font-size: 16px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -564,9 +576,9 @@
       }
       
       .password-container {
-        padding: 18px 15px;
-        max-width: 300px;
-        width: 85%;
+        padding: 22px 20px;
+        max-width: 340px;
+        width: 92%;
       }
       
       .heart-image {
@@ -605,6 +617,21 @@
         margin-bottom: 15px;
         padding: 3px;
       }
+      
+      /* Optimización adicional para móviles pequeños */
+      body::after {
+        font-size: 18px;
+        letter-spacing: 25px;
+        line-height: 70px;
+      }
+      
+      body::before {
+        opacity: 0.5;
+      }
+      
+      .particle {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
@@ -619,7 +646,7 @@
   <div class="password-container">
     <!-- Imagen de corazón -->
     <div class="heart-image">
-      <img src="IMG_20250628_180511.jpg" alt="Mi Niña Bonita" />
+      <img src="photos/IMG_20250628_180511.jpg" alt="Mi Niña Bonita" />
     </div>
 
     <!-- Texto -->
@@ -659,7 +686,7 @@
     // Crear partículas de fondo
     function createParticles() {
       const particlesContainer = document.querySelector('.particles');
-      const particles = ['�', '🌙', '⭐', '�', '🌟', '✨', '💫', '�', '🌌', '�'];
+      const particles = ['💕', '🌙', '⭐', '💖', '🌟', '✨', '💫', '💗', '🌌', '💜', '💘', '💝', '🌹', '🌺', '💐'];
       
       setInterval(() => {
         const particle = document.createElement('div');
@@ -764,7 +791,7 @@
       
       setTimeout(() => {
         container.style.transform = '';
-        container.style.animation = 'containerFloat 4s ease-in-out infinite';
+        container.style.animation = 'nightContainerFloat 5s ease-in-out infinite';
       }, 400);
     }
 
@@ -837,4 +864,3 @@
   </script>
 </body>
 </html>
-
